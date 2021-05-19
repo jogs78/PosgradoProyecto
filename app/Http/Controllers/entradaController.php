@@ -14,15 +14,13 @@ use App\Models\Pe;
 class entradaController extends Controller
 {
     public function validar (Request $peticion){
-        $usuario = Estudiante::where('correo', $peticion->input('nombre'))->first();
         
-        if(! is_null($usuario) ){
-            //es un estudiante debo checar su password
-            
-            $password_dieron =  $peticion->input('palabra');
-            
+        $usuario = Estudiante::where('correo', $peticion->input('nombre'))->first();
+
+        if(!is_null($usuario) ){
+            //es un estudiante debo checar su password   
+            $password_dieron =  $peticion->input('palabra');            
             $password_guadado = $usuario->password;
-            
             
             if (Hash::check($password_dieron, $password_guadado)) {               
                 \Session::put('usuario' ,  $usuario );
@@ -54,6 +52,8 @@ class entradaController extends Controller
                 return  redirect('/docente');
             }
         }
+
+        echo "USUARIO NO REGISTRADO";
 
         }
 }

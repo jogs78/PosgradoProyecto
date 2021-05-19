@@ -218,8 +218,8 @@
                                 <div class="row">
                                         
                                    
-                                    <table class="table table-light table-striped mt-4">
-                                        <thead class="table table-dark table-striped mt-4">
+                                    <table class="table table-dark table-striped mt-4">
+                                        <thead >
                                             
                                             <tr>
                                                 <th scope="col">Id</th>

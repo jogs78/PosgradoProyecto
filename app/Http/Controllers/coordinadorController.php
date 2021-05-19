@@ -11,9 +11,9 @@ class coordinadorController extends Controller
     {
         //PLANTILLA DONDE EL ESTUDIANTE AGREGA PROYECTO
         $usuario = \Session::get('usuario');
-        echo "entra coordinador: $usuario->id";
+        //echo "entra coordinador: $usuario->id";
     
-        //return view('coordinador.index');//->with('add',$add);
+        return view('coordinador.index');//->with('add',$add);
     }
 
     

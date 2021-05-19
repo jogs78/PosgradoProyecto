@@ -26,6 +26,7 @@ public function index(){
     public function Store(Request $request){
         //dd($request-> all());
         proyecto::create(request()->all());
+
         //$proyecto = new Proyecto;
         //$proyecto->Titulo = request()->Titulo;
         //$proyecto->Hipotesis = request()->Hipotesis;

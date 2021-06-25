@@ -50,14 +50,9 @@ class entradaController extends Controller
             $password_guadado = $usuario->password;
             if (Hash::check($password_dieron, $password_guadado)) {
                 \Session::put('usuario' ,  $usuario );
-/*
-                session_start -->es de php
-                session_destroy(); --> es de php 
 
-                \Session
-*/
-                //session_start();     CHECAR DIFERENCIA
                 return  redirect('/docentes');
+                
             }
         }
 

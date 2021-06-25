@@ -3,7 +3,7 @@
 @section('titulo')
   <p>Docente</p>
 
-@endsection
+@endsection 
 @section('submenu')
     <!--OPCION DEL MENU PARA SALIR DE SESION -->      
     <form action="/logout">
@@ -39,14 +39,6 @@
                                         <button type="button" class="btn btn-tool dropdown-toggle" data-toggle="dropdown">
                                             <i class="fas fa-wrench"></i>
                                         </button>
-
-                                        <div class="dropdown-menu dropdown-menu-right" role="menu">
-                                            <a href="#" class="dropdown-item">Action</a>
-                                            <a href="#" class="dropdown-item">Another action</a>
-                                            <a href="#" class="dropdown-item">Something else here</a>
-                                            <a class="dropdown-divider"></a>
-                                            <a href="#" class="dropdown-item">Separated link</a>
-                                        </div>
                                     </div>
                                     <button type="button" class="btn btn-tool" data-card-widget="remove">
                                     <i class="fas fa-times"></i>
@@ -62,7 +54,6 @@
                                         <div class="row">
                                             <table class="table table-dark table-striped mt-4">
                                                 <thead class="table table-dark table-striped mt-4">
-                                                    
                                                     <tr>
                                                         <th scope="col">Proyecto</th>
                                                         <th scope="col">Estudiante</th>
@@ -74,9 +65,11 @@
                                                 <tr>
                                                 @foreach($proyectos as $proyecto)
                                                         <th scope="col">{{$proyecto->id}}</th>
-                                                    @foreach($estudiantes as $estudiante)    
+                                                @foreach($estudiantes as $estudiante) 
+                                                <tr>
+                                                        <th scope="col"></th>
                                                         <th scope="col">{{$estudiante->nombre}}</th>
-                                                        <th scope="col">
+                                                         <th scope="col">
                                                                 <div class="btn-group">
                                                                     <a href="{{url('/historico')}}"><buttom class="btn btn-danger">Historico</buttom></a>
                                                                 </div>  
@@ -88,8 +81,6 @@
                                                     <tr> 
                                                 </tbody>
                                             </table>     
-                                                
-                    
                                         </div>
                                     </div>
                                 </div>

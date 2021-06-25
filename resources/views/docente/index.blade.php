@@ -65,7 +65,7 @@
                                                 <tr>
                                                 @foreach($proyectos as $proyecto)
                                                         <th scope="col">{{$proyecto->id}}</th>
-                                                @foreach($estudiantes as $estudiante) 
+                                                 @foreach($estudiantes as $estudiante) 
                                                 <tr>
                                                         <th scope="col"></th>
                                                         <th scope="col">{{$estudiante->nombre}}</th>
